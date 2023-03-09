@@ -13,7 +13,8 @@ import { ModalComponent } from '../modals/modal/modal.component';
   styleUrls: ['./register-user.component.scss']
 })
 export class RegisterUserComponent {
-
+  constructor(private createUserService: CreateNewUserService, public dialogMOdal: MatDialog) {
+  }
 
   sex: string[] = ['Masculino', 'Feminino'];
   status: string[] = ['Atendido', 'Não atendido'];
@@ -33,8 +34,6 @@ export class RegisterUserComponent {
     sex: '',
     url: '',
   }
-
-
 
   createUser() {
     if (this.sexUser === 'Masculino') {
