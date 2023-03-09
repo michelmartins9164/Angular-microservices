@@ -1,0 +1,48 @@
+<app-nav-bar></app-nav-bar>
+<div class="flex-column container-form">
+  <div>
+    <h1 class="col">Cadastrar paciente</h1>
+  </div>
+  <div>
+    <form (submit)="createUser()" action="POST">
+
+      <div class="row">
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input class="col" matInput type="text" name="name" [(ngModel)]="nameUser" autocomplete="off" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+          placeholder="Ex. pat@example.com">
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field> -->
+        <mat-form-field class="col">
+          <mat-label>Nome</mat-label>
+          <input class="col" matInput type="text" name="name" [(ngModel)]="nameUser" autocomplete="off" >
+        </mat-form-field>
+        <mat-form-field class="col">
+          <mat-label>Idade</mat-label>
+          <input matInput class="col input" type="number" name="age" [(ngModel)]="ageUser">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <label for="age">Status:</label>
+        <select class="col form-control" name="statusUser" [(ngModel)]="statusUser">
+          <option *ngFor="let item of status" [value]="item">{{item}}</option>
+        </select>
+        <label for="age">Sexo:</label>
+        <select class="col form-control" name="sexUser" [(ngModel)]="sexUser">
+          <option class="form-control" *ngFor="let item of sex; let i = index" id="{{i}}" [value]="item">{{item}}
+          </option>
+        </select>
+      </div>
+      <label for="age">Data:</label>
+      <input class="form-control" type="text" name="dateCreate" [(ngModel)]="dateCreate">
+      <button class="btn btn-success" mat-button  type="submit">Criar</button>
+    </form>
+  </div>
+</div>
+

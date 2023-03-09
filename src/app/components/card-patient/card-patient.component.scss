@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  justify-content: start;
+  padding: .5rem;
+
+  .container-card {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    background-color: #FFF;
+    box-shadow: 2px 4px 4px #908B8B90;
+    border-radius: 8px;
+
+
+    .container-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .container-data {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .info-status {
+        margin-left: .5rem;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        column-gap: .1rem;
+      }
+    }
+  }
+
+}

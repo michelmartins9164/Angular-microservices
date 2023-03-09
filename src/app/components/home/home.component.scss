@@ -1,0 +1,49 @@
+main {
+  margin: 0 4rem;
+  margin-bottom: 1rem;
+}
+.container-title {
+  position: relative;
+  h1 {
+    font-size: 3.5rem;
+    width: 70%;
+    line-height: 3.5rem;
+    font-weight: 600;
+  }
+  p {
+    width: 50%;
+  }
+
+  .blur {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    filter: blur(90px);
+    z-index: -1;
+    width: 30rem;
+    height: 10rem;
+    background-color: #2A72DD90;
+  }
+}
+
+.container-img {
+  position: relative;
+
+  img {
+    margin-top: 3rem;
+    width: 32rem;
+    margin-right: 15rem;
+  }
+  .blur {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    filter: blur(70px);
+    z-index: -1;
+    width: 10rem;
+    height: 10rem;
+    background-color: #2A72DD80;
+  }
+}

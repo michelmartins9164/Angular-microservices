@@ -1,0 +1,30 @@
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: -10rem;
+
+  form {
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 2px 4px 4px #908B8B90;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+
+    input,
+    select {
+      margin-bottom: 1rem;
+
+      &::placeholder {
+        color: red !important;
+      }
+    }
+  }
+
+  .cdk-text-field-autofilled {
+    background-color: red !important;
+  }
+}

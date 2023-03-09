@@ -1,0 +1,19 @@
+
+.flex-column {
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 2px 4px 4px #908B8B90;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.on {
+  display: flex;
+}
+
+.off {
+  display: none;
+}

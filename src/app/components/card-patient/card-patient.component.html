@@ -1,0 +1,35 @@
+<div >
+  <section class="container">
+    <article class="container-card"
+      *ngFor="let user of user | paginate: { itemsPerPage: contador, currentPage: pag }; let use of urlImage; let i = index" id="{{i}}">
+      <div>
+        <div class="container-img">
+          <p><span>Nome:</span> {{user.name}}</p>
+          <img [src]="use.url" alt="card patient">
+        </div>
+      </div>
+      <div class="container-data">
+        <div class="container-data-person">
+          <div class="info-status">
+            <p><span>Idade:</span>{{user.age}}</p>
+          </div>
+        </div>
+        <div class="info-status">
+          <span>status</span>
+          <p>{{user.status}}</p>
+        </div>
+        <div class="info-status">
+          <span>agendado em:</span>
+          <p>{{user.date | date : 'dd/mm/yyyy'}}</p>
+        </div>
+      </div>
+      <button id="{{user.id}}" (click)="teste($event)"></button>
+    </article>
+  </section>
+  <div style="display: flex;align-content: center;justify-content: center;">
+    <div>
+      <pagination-controls (pageChange)="pag = $event" previousLabel="Anterior" nextLabel="Próximo">
+      </pagination-controls>
+    </div>
+  </div>
+</div>
